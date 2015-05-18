@@ -11,7 +11,7 @@ class testradio(unittest.TestCase):
         ic910 = radio.Radio("IC910", "Sub", "CW")
         ic910.connect("/dev/ttyUSB1", 19200)
         ic910.changefreq(437.38590)
-        print "Sub CW"
+        print("Sub CW")
         ic910.changemode("Sub", "CW")
         ic910.changefreq(437.32590)
         time.sleep(0.05)

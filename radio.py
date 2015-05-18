@@ -4,7 +4,7 @@ import serial
 
 
 class IC910:
-<<<<<<< HEAD
+#<<<<<<< HEAD
     def connect(self, radioport,radiobaudrate):
         self._ser=serial.Serial(port=radioport,baudrate=radiobaudrate)
 
@@ -12,7 +12,7 @@ class IC910:
         freqvalue=str(freqvalue)
         freqvalue=freqvalue.replace('.',"")
         freqvalue=(freqvalue+"000000000")[:9]
-        print [freqvalue[x-1]+freqvalue[x] for x in range(len(freqvalue)-1,-1,-2)]
+        print([freqvalue[x-1]+freqvalue[x] for x in range(len(freqvalue)-1,-1,-2)])
         return [freqvalue[x-1]+freqvalue[x] for x in range(len(freqvalue)-1,-1,-2)]
 
     def changefreq(self, freqvalue):
@@ -71,6 +71,7 @@ class IC910:
     def close(self):
         self._ser.flush()
         self._ser.close()
+
 
 class IC911(IC910):
     pass
